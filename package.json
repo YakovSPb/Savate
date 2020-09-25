@@ -12,6 +12,7 @@
 		"bootstrap": "^4.5.2",
 		"browser-sync": "^2.26.12",
 		"del": "^5.1.0",
+		"fancybox": "^3.0.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-clean-css": "^4.3.0",
@@ -21,6 +22,7 @@
 		"gulp-responsive": "^3.0.1",
 		"gulp-rsync": "0.0.9",
 		"gulp-sass": "^4.1.0",
-		"gulp-uglify-es": "^2.0.0"
+		"gulp-uglify-es": "^2.0.0",
+		"jquery": "^3.5.1"
 	}
 }

@@ -36,7 +36,7 @@ gulp.task('styles', function() {
 		grid: true,
 		overrideBrowserslist: ['last 10 versions']
 	}))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
@@ -44,12 +44,13 @@ gulp.task('styles', function() {
 // Scripts & JS Libraries
 gulp.task('scripts', function() {
 	return gulp.src([
-		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		'node_modules/jquery/dist/jquery.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
+		'node_modules/fancybox/dist/js/jquery.fancybox.js',
 		])
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Minify js (opt.)
+	// .pipe(uglify()) // Minify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

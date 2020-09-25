@@ -36,7 +36,7 @@ body
 	font-size: 18px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.4
 	font-family: $Roboto
 	font-weight: 300
 	overflow-x: hidden
@@ -59,7 +59,7 @@ body
 	text-decoration: none
 	color: #fff
 	transition: .3s all ease
-	margin: 0 auto
+	margin: 37px auto 95px auto
 	cursor: pointer
 	&:hover
 		color: #fff
@@ -68,7 +68,7 @@ body
 	
 // Custom Sass / Remove before use
 .container
-	max-width: 1320px
+	max-width: 1340px
 	padding:
 		right: $gutter/2
 		left: $gutter/2
@@ -142,6 +142,10 @@ body
 .menu
 	font-size: 18px
 	font-weight: 700
+	&__item--active
+		.menu__link
+			background: $accent
+			color: #fff
 	&__list
 		list-style-type: none
 		display: -webkit-flex
@@ -200,3 +204,193 @@ body
 		font-size: 16px	
 		display: block
 		transition: all .3s ease
+
+// NEWS
+.section-news
+	&__sect-title
+		margin: 15px 0 15px 0
+.sect-title
+	display: inline-block
+	font-size: 16px
+	font-weight: 700
+	background: rgba(0, 51, 129, 0.5)
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 10px
+	text-transform: uppercase
+	color: #fff
+	padding: 4px 8px 3px 11px
+
+// Items
+.items
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+.item
+	max-width: 422px
+	height: 474px
+	background: #F2F2F2
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), inset 0px 5px 4px rgba(255, 255, 255, 0.5)
+	border-radius: 10px
+	margin-bottom: 40px
+	&__link
+		padding: 25px
+		display: block
+	a
+		text-decoration: none
+	&__img
+		display: block
+		width: 100%
+		height: 250px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__header
+		display: block
+		margin: 17px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__tag
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+		color: #fff
+		background: rgba(0, 51, 129, 0.5)
+		border-radius: 10px
+		padding: 5px 7px
+	&__date
+		color: $text
+		font-size: 12px
+		font-weight: 400
+	&__title
+		font-size: 22px
+		font-weight: 400
+		color: #000
+		display: block
+	&__text
+		font-size: 16px
+		display: block
+		font-weight: 400
+		margin-top: 15px
+		line-height: 19px
+		overflow: hidden
+		height: 57px
+		color: #000
+
+
+//EVENTS
+.section-events
+	&__sect-title
+		margin-bottom: 26px
+
+
+//MEDIA
+.items-media
+	.item__text
+		font-size: 20px
+		line-height: 23px
+	.item
+		padding: 25px
+		&__youtube
+			.fancybox-media
+				position: relative
+				display: block
+				&:hover
+					&:after
+						opacity: 1
+				&::after
+					content: ''
+					width: 60px
+					height: 60px
+					position: absolute
+					top: 50%
+					left: 50%
+					margin-top: -30px
+					margin-left: -30px
+					background: url('../img/youtube.svg') no-repeat center
+					z-index: 100
+					opacity: 0.8
+					transition: all .3s ease
+
+
+
+//Footer
+.footer
+	padding: 54px 0 90px 0
+	background: #fff
+	&__logo
+		.logo__img
+			img
+				width: 44px
+				width: 42px
+		.logo__text
+			font-size: 21px
+			line-height: 25px
+			max-width: 400px	
+.footer_partner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-bottom: 57px
+	border-bottom: 1px solid #004DC1
+.footer_partner__btn
+	display: inline-block
+	font-size: 16px
+	font-weight: 700
+	background: rgba(0, 51, 129, 0.5)
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 10px
+	text-transform: uppercase
+	color: #fff
+	padding: 4px 8px 3px 11px
+	cursor: pointer
+	transition: all .3s ease
+	&:hover
+		text-decoration: none
+		background: $blue
+		color: #fff
+.footer_info
+	margin-top: 50px
+	display: flex
+
+.location
+	display: flex
+	margin-top: -8px
+	margin-right: 55px;
+	&__img
+		margin-right: 13px
+	&__text
+		max-width: 343px
+		b
+			display: block
+		p
+			margin-bottom: 0
+
+.phone
+	display: flex
+	margin-top: -8px
+	&__img
+		margin-right: 13px
+	&__text
+		max-width: 343px
+		b
+			display: block
+		p
+			margin-bottom: 0
+		a
+			color: $text
+
+.up_arrow
+	position: fixed
+	bottom: 50px
+	right: 10px
+	cursor: pointer
+	opacity: .6
+	transition: all .3s ease
+	display: none
+	&:hover
+			opacity: 	1
+.back_to_top-show 
+	display: block
+
