@@ -1,7 +1,6 @@
 @import vars
 @import fonts
 @import libs
-
 ::placeholder
 	color: #666
 
@@ -48,7 +47,7 @@ body
 	display: flex
 	justify-content: center
 	align-items: center
-	width: 422px
+	max-width: 422px
 	height: 66px
 	background-color: $accent
 	border: 1px soilid $accent
@@ -79,20 +78,39 @@ body
 //HEADER
 .header
 	background: #fff
+	+media-breakpoint-down(lg)
+		padding-bottom: 16px
 	&__logo
 		margin-bottom: 19px
+		+media-breakpoint-down(sm)
+			margin-bottom: 8px
 	&__social
 		margin-bottom: 40px
+	.container
+		+media-breakpoint-down(lg)
+			padding: 0 23px
 .header_inner
 	display: flex
 	align-items: flex-end
 	justify-content: space-between
-	padding-top: 48px
+	padding-top: 10px
 	border-bottom: 1px solid $blue
+	+media-breakpoint-down(md)
+		padding-top: 15px
 .logo
 	display: flex
 	&__img
 		margin-right: 7px
+	&__link
+		width: 84px
+		height: 84px
+		display: block
+		+media-breakpoint-down(sm)
+			width: 25px
+			height: 25px
+		img
+			width: 100%
+			height: 100%
 	&__text
 		text-transform: uppercase
 		font-size: 36px
@@ -101,11 +119,19 @@ body
 		font-weight: 700
 		max-width: 638px
 		color: $accent
+		+media-breakpoint-down(sm)
+			max-width: 150px
+			font-size: 8px
+			line-height: 12px
 	&__accent
 		color: $red
 .social
 	display: flex
 	align-items: center
+	a
+		text-decoration: none
+	+media-breakpoint-down(lg)
+		display: none
 	.fa
 		font-size: 30px
 		color: $accent
@@ -139,12 +165,30 @@ body
 // HEADER MENU
 .menu-item--close
 	display: none
+.gumburger
+	position: absolute
+	top: 40px
+	right: 20px
+	display: none
+	cursor: pointer
+	+media-breakpoint-down(lg)
+		display: block
+		img
+			width: 35px
+	+media-breakpoint-down(md)
+	+media-breakpoint-down(sm)
+		top: 10px
+		img
+			width: 24px	 
+			right: 30px
 .menu
 	font-size: 18px
 	font-weight: 700
+	+media-breakpoint-down(lg)
+		display: none
 	&__item--active
+		background: $accent
 		.menu__link
-			background: $accent
 			color: #fff
 	&__list
 		list-style-type: none
@@ -155,25 +199,29 @@ body
 		display: flex
 		padding-left: 0
 	&__item
-		padding: 23px 5px 28px 5px
+		margin: 23px 5px 28px 5px
 		position: relative
+		border-radius: 10px
+		transition: all .3s ease
 		&:hover
+			background: $accent
+			.menu__link
+				color: #fff
 			.menu__submenu
 				display: block
 	&__link
-		padding: 5px 8px
-		border-radius: 10px
+		display: block
 		color: $accent
 		text-transform: uppercase
 		transition: .3s all ease
+		padding: 5px 8px
 		&:hover
 			text-decoration: none
-			background: $accent
 			color: #fff
 	&__submenu
 		position: absolute
 		width: 207px
-		top: 55px
+		top: 35px
 		left: 5px
 		background-color: $gray
 		border-radius: 10px
@@ -221,30 +269,38 @@ body
 	padding: 4px 8px 3px 11px
 
 // Items
-.items
+.mitems
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-.item
+
+.mitem
 	max-width: 422px
 	height: 474px
 	background: #F2F2F2
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), inset 0px 5px 4px rgba(255, 255, 255, 0.5)
 	border-radius: 10px
-	margin-bottom: 40px
+	margin: 0 auto 40px auto
 	&__link
 		padding: 25px
 		display: block
+		&:hover
+			.item__img
+				overflow: hidden
+				img
+					transform: scale(1.1)
 	a
 		text-decoration: none
 	&__img
 		display: block
 		width: 100%
 		height: 250px
+		overflow: hidden
 		img
 			width: 100%
 			height: 100%
 			object-fit: cover
+			transition: all .8s ease
 	&__header
 		display: block
 		margin: 17px 0
@@ -286,14 +342,21 @@ body
 
 
 //MEDIA
-.items-media
-	.item__text
+.mitems-media
+	.mitem__img
+		overflow: hidden
+		img
+			transition: all .8s ease
+		&:hover
+			img
+				transform: scale(1.1)
+	.mitem__text
 		font-size: 20px
 		line-height: 23px
-	.item
+	.mitem
 		padding: 25px
 		&__youtube
-			.fancybox-media
+			a
 				position: relative
 				display: block
 				&:hover
@@ -309,7 +372,7 @@ body
 					margin-top: -30px
 					margin-left: -30px
 					background: url('../img/youtube.svg') no-repeat center
-					z-index: 100
+					z-index: 1
 					opacity: 0.8
 					transition: all .3s ease
 
@@ -317,23 +380,33 @@ body
 
 //Footer
 .footer
-	padding: 54px 0 90px 0
+	padding: 54px 15px 90px 15px
 	background: #fff
+	+media-breakpoint-down(sm)
+		padding: 50px 35px
 	&__logo
-		.logo__img
+		.logo__link
+			width: 44px
+			height: 42px
 			img
-				width: 44px
-				width: 42px
+				width: 100%
+				height: 100%
 		.logo__text
 			font-size: 21px
 			line-height: 25px
 			max-width: 400px	
 .footer_partner
 	display: flex
-	justify-content: space-between
+	flex-wrap: wrap
 	align-items: center
 	padding-bottom: 57px
 	border-bottom: 1px solid #004DC1
+	position: relative
+	img
+		margin-right: 50px
+		display: block
+	+media-breakpoint-down(sm)
+		padding-top: 0
 .footer_partner__btn
 	display: inline-block
 	font-size: 16px
@@ -346,18 +419,26 @@ body
 	padding: 4px 8px 3px 11px
 	cursor: pointer
 	transition: all .3s ease
+	margin-right: 42px
+	+media-breakpoint-down(sm)
+		font-size: 8px
+		position: absolute
+		top: -23px
+		left: 0
 	&:hover
 		text-decoration: none
-		background: $blue
+		background: $accent
 		color: #fff
 .footer_info
 	margin-top: 50px
 	display: flex
+	+media-breakpoint-down(md)
+		flex-direction: column
 
 .location
 	display: flex
 	margin-top: -8px
-	margin-right: 55px;
+	margin-right: 55px
 	&__img
 		margin-right: 13px
 	&__text
@@ -386,11 +467,149 @@ body
 	bottom: 50px
 	right: 10px
 	cursor: pointer
-	opacity: .6
+	opacity: 1
 	transition: all .3s ease
 	display: none
 	&:hover
-			opacity: 	1
+			opacity: 	.6
 .back_to_top-show 
 	display: block
+
+
+
+//News
+.search
+	margin-bottom: 25px
+.select_inner
+	width: 200px
+	display: flex
+
+.search_inner
+	display: flex
+	height: 30px
+	&__separator
+		width: 17px
+
+
+.search_list
+	display: flex
+	list-style-type: none
+	padding-left: 0
+	margin-bottom: 0
+
+.selectize-control
+	width: 200px
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active
+	font-size: 16px
+	line-height: 19px
+	text-transform: uppercase
+	color: $accent
+	font-weight: bold
+	padding: 6px 9px
+	border-radius: 10px
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border: none
+	background: $gray
+
+.selectize-control.single .selectize-input::after
+	border-color: $accent transparent transparent transparent
+	right: 10px
+	margin-top: -5px
+	border-width: 7px 7px 0 7px
+.selectize-control.single .selectize-input.dropdown-active:after
+	border-color: transparent transparent $accent transparent
+	border-width: 0 7px 7px 7px
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input
+	background: $gray
+.selectize-dropdown
+	margin-top: 5px
+	border: 0
+	background: $gray
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 10px
+	padding: 10px 0
+.selectize-dropdown .option, .selectize-dropdown [data-disabled], .selectize-dropdown [data-disabled] [data-selectable].option
+	font-size: 16px
+	line-height: 19px
+	text-transform: uppercase
+	color: $accent
+	font-weight: bold
+.selectize-dropdown .option
+	transition: .3s all ease	
+.selectize-dropdown .option:hover
+	background: $accent
+	color: #ffffff
+	cursor: pointer
+
+.search_list
+	&__active
+		color: #fff!important
+		background: $accent!important
+	li
+		font-size: 16px
+		line-height: 19px
+		text-transform: uppercase
+		margin-left: 30px
+		cursor: pointer
+		background: $gray
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius: 10px
+		padding: 6px 9px
+		color: $accent
+		font-weight: bold
+		transition: all .3s ease
+		&:hover
+			color: #ffffff
+			background: $accent
+
+.mb_190
+	margin-bottom: 190px
+
+//foto and video
+.item_foto
+	padding: 	0!important
+	height: auto
+	margin: 0 auto 55px auto
+	.mitem__header
+		margin: 0!important
+
+
+//Breadcrumbs
+.bradcrumbs
+	display: flex
+	margin-bottom: 30px
+	&__link
+		font-size: 16px
+		padding: 6px 9px 6px 32px
+		margin-right: 20px
+		background: $gray
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius: 10px
+		text-transform: uppercase
+		font-weight: bold
+		position: relative
+		transition: all .3s ease
+		&:before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 11px
+			width: 20px
+			height: 20px
+			background: url('../img/rectangle_left.svg') no-repeat center
+		a
+			display: block
+			color: $accent
+			text-decoration: none
+.bradcrumbs__item
+	background: rgba(0, 51, 129, .5)
+	font-size: 16px
+	padding: 6px 9px
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 10px
+	text-transform: uppercase
+	font-weight: bold
+	color: #fff
 

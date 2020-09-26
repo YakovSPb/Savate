@@ -1,7 +1,6 @@
 
 section.the-css-at-table {
   display: table;
-  border-collapse: collapse;
   margin: 0 0 20px 0;
   width: 100%;
 }
@@ -14,18 +13,23 @@ section.the-css-at-table header > .tr{
 }
 section.the-css-at-table .tbody {
   display: table-row-group;
+  font-weight: 400;
 }
 section.the-css-at-table .tr {
   display: table-row;
 }
 section.the-css-at-table .tr .th{
-background: #E9E9E9;
--webkit-box-shadow: none;
-        box-shadow: none;
+  background: #E9E9E9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 16px;
+  font-weight: 300;
 }
 section.the-css-at-table .tr > span {
   display: table-cell;
   padding: 10px;
+  font-size: 22px;
+  font-weight: 400px;
   border: 1px solid #E6E7F1;
   text-align: left;
   background: #F2F2F2;

@@ -48,6 +48,7 @@ gulp.task('scripts', function() {
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		'node_modules/fancybox/dist/js/jquery.fancybox.js',
+		'node_modules/selectize/dist/js/standalone/selectize.min.js',
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Minify js (opt.)
