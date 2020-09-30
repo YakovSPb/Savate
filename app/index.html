@@ -18,21 +18,16 @@
 </head>
 
 <body>
-	<a class="gumburger"><img src="img/menu.svg" alt="alt">
+	<a class="gumburger"><img src="img/menu.svg" alt="alt"></a>
 
 	<header class="header">
 		<div class="container">
 			<div class="header_inner">
 				<div class="logo header__logo">
 					<div class="logo__img"><a class="logo__link" href="/"><img src="img/@2x/logo.png" alt="Savate"></a></div>
-					<div class="logo__text">Общероссийская Спортивная Федерация <span class="logo__accent">Савата</span></div>
+					<div class="logo__text"><a href="/">Общероссийская Спортивная Федерация <span class="logo__accent">Савата</span></a></div>
 				</div>
-				<div class="social header__social">
-					<div class="social__item"><a href="#"><i class="fa fa-vk"></i></a></div>
-					<div class="social__item"><a href="#"><i class="fa fa-instagram"></i></a></div>
-					<div class="social__item"><a href="#"><i class="fa fa-facebook-official"></i></a></div>
-					<div class="social__item"><a href="#"><i class="fa fa-youtube-play"></i></a></div>
-				</div>
+				<div class="social header__social"><a href="#"><div class="social__item social__vk"></div></a><a href="#"><div class="social__item social__instagram"></div></a><a href="#"><div class="social__item social__facebook"></div></a><a href="#"><div class="social__item social__youtube"></div></a></div>
 			</div>
 
 			<nav class="menu header__menu">
@@ -42,32 +37,32 @@
 					<li class="menu__item"><a class="menu__link" href="/media.html">Медиа</a></li>
 					<li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="#">Зал славы</a>
 						<ul class="menu__submenu">
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Легенды</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Чемпионы</a></li>
+							<li class="menu__sub-item"><a class="menu__sub-link" href="/legends.html">Легенды</a></li>
+							<li class="menu__sub-item"><a class="menu__sub-link" href="/champions.html">Чемпионы</a></li>
 						</ul>
 					</li>
 					<li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="#">Результаты</a>
-						<ul class="menu__submenu">
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Соревнования</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Технический разряд</a></li>
-						</ul>
+							<ul class="menu__submenu">
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/competitions.html">Соревнования</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/standards.html">Технический разряд</a></li>
+							</ul>
 					</li>
-					<li class="menu__item"><a class="menu__link" href="#">Календарь соревнований</a></li>
+					<li class="menu__item"><a class="menu__link" href="/calendar.html">Календарь соревнований</a></li>
 					<li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="#">О савате</a>
-						<ul class="menu__submenu">
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">История</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Современный сават</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Правила</a></li>
-						</ul>
+							<ul class="menu__submenu">
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/history.html">История</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/modern.html">Современный сават</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/rules.html">Правила</a></li>
+							</ul>
 					</li>
 					<li class="menu__item menu__item--hassubmenu"><a class="menu__link" href="#">Федерация</a>
 						<ul class="menu__submenu">
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">О федерации</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Руководство</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Документы</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Задачи</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Антидопинг</a></li>
-							<li class="menu__sub-item"><a class="menu__sub-link" href="#">Партнеры</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/federation.html">О федерации</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/administration.html">Руководство</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/documents.html">Документы</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/task.html">Задачи</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/anti-doping.html">Антидопинг</a></li>
+								<li class="menu__sub-item"><a class="menu__sub-link" href="/partners.html">Партнеры</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -150,11 +145,11 @@
 						</div>
 					</div>
 
-				<a href="#" class="btn">Больше новостей</a>
+				<a href="/news.html" class="btn">Больше новостей</a>
 			</div>
 		</div>
 
-		<div class="section-events">
+		<div class="section-events section-events_according">
 			<div class="container">
 				<div class="sect-title section-events__sect-title">Ближайшие события</div>
 				
@@ -266,7 +261,9 @@
 						</p>
 					</div>
 				</section>
-				<a href="#" class="btn">Перейти к календарю</a>
+				<div class="btn btn--look  btn--look_down"><span>Подробнее</span></div>
+				<div class="btn btn--look btn--look_up"><span>Скрыть детали</span></div>
+				<a href="/calendar.html" class="btn">Перейти к календарю</a>
 			</div>
 		</div>
 
@@ -309,7 +306,7 @@
 					</div>
 			</div>
 
-				<a href="#" class="btn">Перейти к фото и видео</a>
+				<a href="/media.html" class="btn">Перейти к фото и видео</a>
 			</div>
 		</div>
 
@@ -332,23 +329,25 @@
 			<div class="footer_info">
 				<div class="logo footer__logo">
 					<div class="logo__img"><a class="logo__link" href="/"><img src="img/@2x/logo.png" alt="Savate"></a></div>
-					<div class="logo__text">Общероссийская Спортивная Федерация <span class="logo__accent">Савата</span></div>
+					<div class="logo__text"><a href="/">Общероссийская Спортивная Федерация <span class="logo__accent">Савата</span></a></div>
 				</div>
+				<div class="footer_info__wrapper">
 				<div class="location">
 					<div class="location__img"><img src="img/location.svg" alt="alt"></div>
 					<div class="location__text">
-						<b>Адрес:</b>
+						<b><img src="img/location.svg" alt="alt"> Адрес:</b>
 						г. Санкт-Петербург, Новоизмайловский проспект, д. 16, к. 6
 					</div>
 				</div>
 				<div class="phone">
 					<div class="phone__img"><img src="img/@2x/phone.png" alt="alt"></div>
 					<div class="phone__text">
-						<b>Контакты:</b>
+						<b><img src="img/@2x/phone.png" alt="alt"> Контакты:</b>
 							<p><a href="tel:+79111276788">+7 911 127 67 88</a></p>
 							<p><a href="mailto:rfsavate@mail.ru">rfsavate@mail.ru</a></p>
 							<p><a href="mailto:savateboxe@mail.ru">savateboxe@mail.ru</a></p>
 					</div>
+				</div>
 				</div>
 			</div>
 		</div>
