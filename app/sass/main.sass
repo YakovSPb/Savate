@@ -470,6 +470,14 @@ body
 	.mitem
 		+media-breakpoint-down(md)
 			height: auto
+
+.mitem__img
+	overflow: hidden
+	img
+		transition: all .8s ease
+	&:hover
+		img
+			transform: scale(1.1)			
 .mitems-media
 	.mitem__img
 		overflow: hidden
@@ -546,21 +554,28 @@ body
 	+media-breakpoint-down(md)
 		padding-bottom: 0px
 		justify-content: space-around
+		margin-right: 0!important	
 	img
-		margin: 0 50px 17px 0
+		margin: 0 30px 17px 0
 		display: block
-		+media-breakpoint-down(md)
-			margin: 0 15px 17px 0
-			&:nth-of-type(1)
-				width: 44px
-			&:nth-of-type(2)
-				width: 44px
+	+media-breakpoint-down(md)
+		margin: 0 15px 17px 0
+		a
+			&:nth-child(2)
+				img
+					width: 44px
 			&:nth-of-type(3)
-				width: 140px
+				img
+					width: 44px
 			&:nth-of-type(4)
-				width: 70px
+				img
+					width: 140px
 			&:nth-of-type(5)
-				width: 118px
+				img
+					width: 70px
+			&:nth-of-type(6)
+				img
+					width: 118px
 	+media-breakpoint-down(sm)
 		padding-top: 0
 .footer_partner__btn
@@ -609,6 +624,9 @@ body
 	+media-breakpoint-down(md)
 		font-size: 12px
 		line-height: 20px
+		width: 50%
+		margin-right: 0	
+		padding-right: 30px
 	&__img
 		margin-right: 13px
 	&__text
@@ -633,6 +651,7 @@ body
 	+media-breakpoint-down(md)
 		font-size: 12px!important
 		line-height: 20px!important
+		width: 50%
 	&__img
 		margin-right: 13px
 	&__text
@@ -681,8 +700,12 @@ body
 .select_inner
 	width: 220px
 	display: flex
+	+media-breakpoint-down(sm)
+		margin-bottom: 10px
 	&:last-of-type
 		margin-right: 30px
+		+media-breakpoint-down(sm)
+			margin-bottom: 0
 .select_inner__cups
 	+media-breakpoint-down(sm)
 		width: 180px
@@ -731,7 +754,7 @@ body
 	flex-wrap: wrap
 	height: 30px
 	&__separator
-		width: 17px
+		width: 18px
 	&__back
 		position: relative
 		height: 33px
@@ -939,7 +962,7 @@ body
 		margin-bottom: 0
 	&__item
 		font-size: 16px
-		margin-right: 20px
+		margin-right: 18px
 		background: $gray
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 		border-radius: 10px
@@ -1093,6 +1116,7 @@ section.the-css-at-table2 .tr > span
 			margin-bottom: 5px
 .federatio__img
 	margin: 25px 0
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 	+media-breakpoint-down(md)
 		margin: 13px 0
 	img
@@ -1100,6 +1124,10 @@ section.the-css-at-table2 .tr > span
 		height: 100%
 
 //ADMINS
+.admins
+	.container > .admin
+		padding-right: 0
+		margin: 0 auto 20px auto
 .admins_inner
 	display: flex
 	justify-content: space-between
@@ -1451,6 +1479,7 @@ section.the-css-at-table2 .tr > span
 		max-width: 428px
 		width: 100%
 		height: 295px
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 		img
 			width: 100%
 			height: 100%
@@ -1475,6 +1504,9 @@ section.the-css-at-table2 .tr > span
 			margin-bottom: 20px
 	&__img
 		text-align: center
+		box-shadow: 0px 4px 4px
+		+media-breakpoint-down(lg)
+			margin-bottom: 20px
 		img
 			+media-breakpoint-down(lg)
 				margin: 0 auto
@@ -1489,6 +1521,9 @@ section.the-css-at-table2 .tr > span
 .history_last_image
 	max-width: 875px
 	margin: 55px auto 0 auto
+	box-shadow: 0px 4px 4px
+	+media-breakpoint-down(lg)
+		margin-bottom: 20px
 	+media-breakpoint-down(md)
 		margin: 0 auto
 	img
@@ -1512,6 +1547,7 @@ section.the-css-at-table2 .tr > span
 	&__img
 		max-width: 620px
 		width: 100%
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 		img
 			width: 100%
 			height: 100%
@@ -1633,7 +1669,6 @@ section.the-css-at-table2 .tr > span
 			padding: 12px 35px
 		img
 			width: 100%
-			height: 100%
 			object-fit: cover
 	&__text
 		color: $accent

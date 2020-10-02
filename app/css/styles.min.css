@@ -18,7 +18,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/robotolight-webfont.woff2") format("woff2");
+  src: url("../fonts/roboto-light-webfont.woff2") format("woff2");
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/RobotoMedium.woff2") format("woff2");
+  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2");
 }
 
 @font-face {
@@ -1453,6 +1453,22 @@ body {
   }
 }
 
+.mitem__img {
+  overflow: hidden;
+}
+
+.mitem__img img {
+  -webkit-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  transition: all .8s ease;
+}
+
+.mitem__img:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .mitems-media .mitem__img {
   overflow: hidden;
 }
@@ -1583,31 +1599,32 @@ body {
     padding-bottom: 0px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-right: 0 !important;
   }
 }
 
 .footer_partner img {
-  margin: 0 50px 17px 0;
+  margin: 0 30px 17px 0;
   display: block;
 }
 
 @media (max-width: 991.98px) {
-  .footer_partner img {
+  .footer_partner {
     margin: 0 15px 17px 0;
   }
-  .footer_partner img:nth-of-type(1) {
+  .footer_partner a:nth-child(2) img {
     width: 44px;
   }
-  .footer_partner img:nth-of-type(2) {
+  .footer_partner a:nth-of-type(3) img {
     width: 44px;
   }
-  .footer_partner img:nth-of-type(3) {
+  .footer_partner a:nth-of-type(4) img {
     width: 140px;
   }
-  .footer_partner img:nth-of-type(4) {
+  .footer_partner a:nth-of-type(5) img {
     width: 70px;
   }
-  .footer_partner img:nth-of-type(5) {
+  .footer_partner a:nth-of-type(6) img {
     width: 118px;
   }
 }
@@ -1701,6 +1718,9 @@ body {
   .location {
     font-size: 12px;
     line-height: 20px;
+    width: 50%;
+    margin-right: 0;
+    padding-right: 30px;
   }
 }
 
@@ -1752,6 +1772,7 @@ body {
   .phone {
     font-size: 12px !important;
     line-height: 20px !important;
+    width: 50%;
   }
 }
 
@@ -1843,8 +1864,20 @@ body {
   display: flex;
 }
 
+@media (max-width: 767.98px) {
+  .select_inner {
+    margin-bottom: 10px;
+  }
+}
+
 .select_inner:last-of-type {
   margin-right: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .select_inner:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1943,7 +1976,7 @@ body {
 }
 
 .search_inner__separator {
-  width: 17px;
+  width: 18px;
 }
 
 .search_inner__back {
@@ -2268,7 +2301,7 @@ body {
 
 .page-menu__item {
   font-size: 16px;
-  margin-right: 20px;
+  margin-right: 18px;
   background: #E9E9E9;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -2531,6 +2564,8 @@ section.the-css-at-table2 .tr .th {
 
 .federatio__img {
   margin: 25px 0;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 991.98px) {
@@ -2542,6 +2577,11 @@ section.the-css-at-table2 .tr .th {
 .federatio__img img {
   width: 100%;
   height: 100%;
+}
+
+.admins .container > .admin {
+  padding-right: 0;
+  margin: 0 auto 20px auto;
 }
 
 .admins_inner {
@@ -3148,6 +3188,8 @@ section.the-css-at-table2 .tr .th {
   max-width: 428px;
   width: 100%;
   height: 295px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .block_info_full__img img {
@@ -3202,6 +3244,14 @@ section.the-css-at-table2 .tr .th {
 
 .history_founders__img {
   text-align: center;
+  -webkit-box-shadow: 0px 4px 4px;
+          box-shadow: 0px 4px 4px;
+}
+
+@media (max-width: 1199.98px) {
+  .history_founders__img {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -3233,6 +3283,14 @@ section.the-css-at-table2 .tr .th {
 .history_last_image {
   max-width: 875px;
   margin: 55px auto 0 auto;
+  -webkit-box-shadow: 0px 4px 4px;
+          box-shadow: 0px 4px 4px;
+}
+
+@media (max-width: 1199.98px) {
+  .history_last_image {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -3285,6 +3343,8 @@ section.the-css-at-table2 .tr .th {
 .block_whis_img__img {
   max-width: 620px;
   width: 100%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .block_whis_img__img img {
@@ -3492,7 +3552,6 @@ section.the-css-at-table2 .tr .th {
 
 .stand_item__img img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
